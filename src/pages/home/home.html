@@ -3,16 +3,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      <img src="assets/imgs/applogo.png" alt="applogo" />
+    </ion-title>
+    <ion-title>
+      <img src="assets/imgs/applogo.png" alt="applogo" style="float: right" />
+    </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-tabs #myTabs>
+  <ion-tab tabTitle="Wall" [root]="tab1"></ion-tab>
+  <ion-tab tabTitle="HotOffers" [root]="tab2"></ion-tab>
+</ion-tabs>
+<!-- <ion-content padding>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+</ion-content> -->

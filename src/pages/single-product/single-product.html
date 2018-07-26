@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img class="logo" src="assets/imgs/applogo.png" alt="applogo" />
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col>
+        <div class="go">
+          <ion-slides autoplay="1000" loop="true" speed="3000">
+            <ion-slide *ngFor="let image of images">
+              <img src={{image.src}} style="width: 100%;height: 100%;" />
+            </ion-slide>
+          </ion-slides>
+          <div class="shop-name">
+            <p>el7ot</p>
+          </div>
+          <div class="rate">
+
+            <rating [(ngModel)]="starsCount" fullIcon="💚" emptyIcon="💛">
+            </rating>
+
+
+
+          </div>
+          <div class="favorite">
+            <ion-icon ios="ios-heart-outline" md="md-heart-outline"></ion-icon>
+
+          </div>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-2 *ngFor="let image of images">
+        <div>
+          <img src={{image.src}} alt="go" />
+        </div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col>
+        <div class="offer-item">
+          <p>Offer Item title here with very long address</p>
+        </div>
+        <div class="offer-item-details">
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+            its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+            to using 'Content here
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-4>
+
+        <button ion-button color="light" full round>Preview</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button color="light" round full>Review</button>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col>
+        <p>More offers from shope Name</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+      <ion-col col-12 col-sm-6>
+        <ion-row>
+          <ion-col col-12 col-sm-12 *ngFor="let p of products">
+            <product [product]="p"></product>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col>
+        <p>Offers you may like :</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-12 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+      <ion-col col-12 col-sm-6 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-8 push-sm-2 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

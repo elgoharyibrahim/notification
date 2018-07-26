@@ -1,0 +1,28 @@
+<ion-card>
+  <div class="photo">
+    <div class="image">
+      <img src="{{shopproduct.img.url}}" />
+
+    </div>
+    <div class="shop-name card-title2">
+      <p>{{shopproduct.shopName}}</p>
+    </div>
+    <div class="rate card-title3">
+      {{starsCount}}
+      <rating [(ngModel)]="starsCount" fullIcon="💚" emptyIcon="💛">
+      </rating>
+
+    </div>
+    <div class="favorite">
+      <ion-icon ios="ios-heart-outline" md="md-heart-outline"></ion-icon>
+    </div>
+  </div>
+  <ion-card-content>
+    <ion-card-title>
+      {{shopproduct.location}}
+    </ion-card-title>
+
+
+
+  </ion-card-content>
+</ion-card>

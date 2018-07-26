@@ -1,30 +1,40 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { CategoriesAndBrandsPage } from "./../pages/categories-and-brands/categories-and-brands";
+import { SearchPage } from "./../pages/search/search";
+import { SingleProductPage } from "./../pages/single-product/single-product";
+import { Component, ViewChild } from "@angular/core";
+import { Nav, Platform } from "ionic-angular";
+import { StatusBar } from "@ionic-native/status-bar";
+import { SplashScreen } from "@ionic-native/splash-screen";
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { HomePage } from "../pages/home/home";
+import { ListPage } from "../pages/list/list";
+import { ProfilePage } from "../pages/profile/profile";
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: "app.html"
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
+  pages: Array<{ title: string; component: any; openTab?: any }>;
 
-  pages: Array<{title: string, component: any}>;
-
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen
+  ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: "Home", component: HomePage },
+      { title: "Profile", component: ProfilePage },
+      { title: "SingleProduct", component: SingleProductPage },
+      { title: "search", component: SearchPage },
+      { title: "categories-brands", component: CategoriesAndBrandsPage },
+      { title: "List", component: ListPage, openTab: 1 }
     ];
-
   }
 
   initializeApp() {
@@ -39,6 +49,6 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(page.component, { openTab: page.openTab });
   }
 }

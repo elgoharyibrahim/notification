@@ -1,0 +1,73 @@
+page-single-product {
+  .star-icon[_ngcontent-c0]:before {
+    color: #dd1515;
+  }
+  .go {
+    position: relative;
+    .favorite {
+      position: absolute;
+      z-index: 2;
+      right: 70px;
+      top: 50px;
+      ion-icon {
+        font-size: 2em;
+        color: #dd1515;
+      }
+    }
+    .rate {
+      position: absolute;
+      z-index: 2;
+      right: 30px;
+      bottom: 30px;
+      ion-icon {
+        font-size: 1em;
+        color: #dd1515;
+      }
+    }
+    .shop-name {
+      position: absolute;
+      z-index: 2;
+      opacity: 0.63;
+      background-color: #ddd5ca;
+      top: 50px;
+      left: 0px;
+      p {
+        font-size: 2.25em;
+        letter-spacing: 0px;
+        color: #2c2c2c;
+        font-family: "Roboto";
+      }
+    }
+  }
+  .logo {
+    height: 40px;
+    width: 50px;
+  }
+  .offer-item {
+    p {
+      font-size: 2.25em;
+      color: #2c2c2c;
+      font-family: "Roboto";
+      padding: 0px 30px;
+    }
+  }
+  .offer-item-details {
+    p {
+      font-size: 1.5em;
+      color: #707070;
+      font-family: "Roboto";
+      padding: 0px 30px;
+    }
+  }
+  button {
+    font-size: 2em;
+    color: #2c2c2c;
+    font-family: "Roboto";
+  }
+  p {
+    font-size: 2.25em;
+    color: #2c2c2c;
+    font-family: "Roboto";
+    margin: 12px;
+  }
+}

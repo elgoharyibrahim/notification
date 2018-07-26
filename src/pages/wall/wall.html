@@ -1,0 +1,185 @@
+<!--
+  Generated template for the WallPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <div class="pick" *ngIf="buttonClicked" id="pickit">
+          <ion-row>
+            <ion-col col-12>
+              <div class="pick-it-up-close">
+                <div class="pick-it-up">
+                  Pick it up
+                </div>
+                <div class="close">
+                  <button ion-button outline (click)="onButtonClick()">
+                    <ion-icon name="close"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6 col-sm-4>
+              <div class="tag">
+                <div class="first-tag">
+                  first tag
+                </div>
+                <div class="btn-tag">
+                  <div [hidden]="Added" class="add-tag">
+                    <ion-icon name="add" (click)="switchAdded()"></ion-icon>
+                  </div>
+                  <div [hidden]="!Added" class="right-tag">
+                    <ion-icon name="checkmark" (click)="switchmark()"></ion-icon>
+                  </div>
+                </div>
+                <!--btn-tag-->
+              </div>
+              <!--tag-->
+            </ion-col>
+            <ion-col col-6 col-sm-4>
+              <div class="tag">
+                <div class="first-tag">
+                  first tag
+                </div>
+                <div class="btn-tag">
+                  <div [hidden]="Added2" class="add-tag">
+                    <ion-icon name="add" (click)="switchAdded2()"></ion-icon>
+                  </div>
+                  <div [hidden]="!Added2" class="right-tag">
+                    <ion-icon name="checkmark" (click)="switchmark2()"></ion-icon>
+                  </div>
+                </div>
+                <!--btn-tag-->
+              </div>
+              <!--tag-->
+            </ion-col>
+            <ion-col col-6 col-sm-4>
+              <div class="tag">
+                <div class="first-tag">
+                  first tag
+                </div>
+                <div class="btn-tag">
+                  <div [hidden]="Added3" class="add-tag">
+                    <ion-icon name="add" (click)="switchAdded3()"></ion-icon>
+                  </div>
+                  <div [hidden]="!Added3" class="right-tag">
+                    <ion-icon name="checkmark" (click)="switchmark3()"></ion-icon>
+                  </div>
+                </div>
+                <!--btn-tag-->
+              </div>
+              <!--tag-->
+            </ion-col>
+            <ion-col col-6 col-sm-4>
+              <div class="tag">
+                <div class="first-tag">
+                  first tag
+                </div>
+                <div class="btn-tag">
+                  <div [hidden]="Added4" class="add-tag">
+                    <!-- <button ion-button outline (click)="switchAdded()"> -->
+                    <ion-icon name="add" (click)="switchAdded4()"></ion-icon>
+                    <!-- </button> -->
+                  </div>
+                  <div [hidden]="!Added4" class="right-tag">
+                    <!-- <button ion-button outline (click)="switchAdded()"> -->
+                    <ion-icon name="checkmark" (click)="switchmark4()"></ion-icon>
+                    <!-- </button> -->
+                  </div>
+                </div>
+                <!--btn-tag-->
+
+              </div>
+              <!--tag-->
+
+            </ion-col>
+            <ion-col col-6 col-sm-4>
+              <div class="tag">
+                <div class="first-tag">
+                  first tag
+                </div>
+                <div class="btn-tag">
+                  <div [hidden]="Added5" class="add-tag">
+                    <ion-icon name="add" (click)="switchAdded5()"></ion-icon>
+                  </div>
+                  <div [hidden]="!Added5" class="right-tag">
+                    <ion-icon name="checkmark" (click)="switchmark5()"></ion-icon>
+                  </div>
+                </div>
+                <!--btn-tag-->
+              </div>
+              <!--tag-->
+            </ion-col>
+            <ion-col col-6 col-sm-4>
+              <button ion-button class="more" clear>Add More!</button>
+
+            </ion-col>
+          </ion-row>
+        </div>
+        <!--pick-->
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <h1>The Nearest Offers</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+      <ion-col col-12 col-sm-6 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-6 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+      <ion-col col-12 col-sm-6>
+        <ion-row>
+          <ion-col col-12 *ngFor="let p of products">
+            <product [product]="p"></product>
+            <product [product]="p"></product>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6 push-sm-3 *ngFor="let p of products">
+        <product [product]="p"></product>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
